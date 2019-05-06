@@ -1,14 +1,8 @@
 @echo off
 cls
-
-.paket\paket.bootstrapper.exe
-if errorlevel 1 (
-  exit /b %errorlevel%
+dotnet restore build.proj
+if not "%*"=="" (
+    dotnet fake build --target %*
+) else (
+    dotnet fake build
 )
-
-.paket\paket.exe restore
-if errorlevel 1 (
-  exit /b %errorlevel%
-)
-
-packages\FAKE\tools\FAKE.exe build.fsx %*
