@@ -49,28 +49,6 @@ let (|Fsproj|Csproj|Vbproj|) (projFileName:string) =
     | f when f.EndsWith("vbproj") -> Vbproj
     | _                           -> failwith (sprintf "Project file %s not supported. Unknown project type." projFileName)
 
-let debugParams (defaults:MSBuildParams) =
-    { defaults with
-        Verbosity = Some(Quiet)
-        Targets = ["Build"]
-        Properties =
-            [
-                "Optimize", "True"
-                "DebugSymbols", "True"
-            ]
-    }
-
-let releaseParams (defaults:MSBuildParams) =
-    { defaults with
-        Verbosity = Some(Quiet)
-        Targets = ["Build"]
-        Properties =
-            [
-                "Optimize", "True"
-                "DebugSymbols", "False"
-            ]
-    }
-
 // Generate assembly info files with the right version & up-to-date information
 Target.create "AssemblyInfo" (fun _ ->
     let getAssemblyInfoAttributes projectName =
@@ -100,13 +78,21 @@ Target.create "AssemblyInfo" (fun _ ->
 
 
 Target.create "Build" (fun _ ->
-    MSBuild.runDebug debugParams buildDir "Build" appReferences
-    |> Trace.logItems "AppBuild-Output: "
+    appReferences
+    |> Seq.iter (DotNet.build (fun p ->
+        { p with
+            Configuration=DotNet.BuildConfiguration.Debug
+            OutputPath=Some buildDir
+        }))
 )
 
 Target.create "BuildTest" (fun _ ->
-    MSBuild.runDebug debugParams buildTestDir "Build" testReferences
-    |> Trace.logItems "AppBuild-Output: "
+    testReferences
+    |> Seq.iter (DotNet.build (fun p ->
+        { p with
+            Configuration=DotNet.BuildConfiguration.Debug
+            OutputPath=Some buildTestDir
+        }))
 )
 
 Target.create "RunTest" (fun _ ->
@@ -116,8 +102,12 @@ Target.create "RunTest" (fun _ ->
 
 
 Target.create "BuildRelease" (fun _ ->
-    MSBuild.runRelease releaseParams releaseDir "Build" releaseReferences
-    |> Trace.logItems "AppBuild-Output: "
+    releaseReferences
+    |> Seq.iter (DotNet.build (fun p ->
+        { p with
+            Configuration=DotNet.BuildConfiguration.Release
+            OutputPath=Some releaseDir
+        }))
 
     !! (releaseDir + "*.xml")
     ++ (releaseDir + "*.pdb")
