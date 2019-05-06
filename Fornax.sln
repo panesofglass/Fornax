@@ -1,0 +1,106 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4AC2C1AF-226B-4A2F-864D-A597121073F4}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fornax.Core", "src\Fornax.Core\Fornax.Core.fsproj", "{635F9372-E826-48FA-B423-F48ACAD605A8}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fornax", "src\Fornax\Fornax.fsproj", "{618CAD8C-535A-4184-BB7F-045E7ED4B341}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FB0CCC73-11D7-475A-88B7-CF7E660C1333}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Fornax.Core.UnitTests", "test\Fornax.Core.UnitTests\Fornax.Core.UnitTests.fsproj", "{32388DFF-640A-4FE7-9656-3F5D206F5FED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fornax.Template", "Fornax.Template", "{943BB8BE-AD2B-4F4F-B028-D63BC0D2B475}"
+	ProjectSection(SolutionItems) = preProject
+		src\Fornax.Template\_config.yml = src\Fornax.Template\_config.yml
+		src\Fornax.Template\archive.md = src\Fornax.Template\archive.md
+		src\Fornax.Template\index.md = src\Fornax.Template\index.md
+		src\Fornax.Template\siteModel.fsx = src\Fornax.Template\siteModel.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{A0D3DDB4-5704-4CB2-A311-A2A1FD305E07}"
+	ProjectSection(SolutionItems) = preProject
+		src\Fornax.Template\css\_settings.scss = src\Fornax.Template\css\_settings.scss
+		src\Fornax.Template\css\style.scss = src\Fornax.Template\css\style.scss
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "posts", "posts", "{C5C9B6CD-C456-4A77-A417-B8A5A746180E}"
+	ProjectSection(SolutionItems) = preProject
+		src\Fornax.Template\posts\2017-05-30-welcome.md = src\Fornax.Template\posts\2017-05-30-welcome.md
+		src\Fornax.Template\posts\2017-05-31-test-styles.md = src\Fornax.Template\posts\2017-05-31-test-styles.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{9E2A8521-5B33-4053-8113-BB2555E22ACA}"
+	ProjectSection(SolutionItems) = preProject
+		src\Fornax.Template\templates\archive.fsx = src\Fornax.Template\templates\archive.fsx
+		src\Fornax.Template\templates\default.fsx = src\Fornax.Template\templates\default.fsx
+		src\Fornax.Template\templates\index.fsx = src\Fornax.Template\templates\index.fsx
+		src\Fornax.Template\templates\post.fsx = src\Fornax.Template\templates\post.fsx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Debug|x64.Build.0 = Debug|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Debug|x86.Build.0 = Debug|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Release|x64.ActiveCfg = Release|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Release|x64.Build.0 = Release|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Release|x86.ActiveCfg = Release|Any CPU
+		{635F9372-E826-48FA-B423-F48ACAD605A8}.Release|x86.Build.0 = Release|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Debug|x64.Build.0 = Debug|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Debug|x86.Build.0 = Debug|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Release|x64.ActiveCfg = Release|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Release|x64.Build.0 = Release|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Release|x86.ActiveCfg = Release|Any CPU
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341}.Release|x86.Build.0 = Release|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Debug|x64.Build.0 = Debug|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Debug|x86.Build.0 = Debug|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Release|x64.ActiveCfg = Release|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Release|x64.Build.0 = Release|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Release|x86.ActiveCfg = Release|Any CPU
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{635F9372-E826-48FA-B423-F48ACAD605A8} = {4AC2C1AF-226B-4A2F-864D-A597121073F4}
+		{618CAD8C-535A-4184-BB7F-045E7ED4B341} = {4AC2C1AF-226B-4A2F-864D-A597121073F4}
+		{32388DFF-640A-4FE7-9656-3F5D206F5FED} = {FB0CCC73-11D7-475A-88B7-CF7E660C1333}
+		{943BB8BE-AD2B-4F4F-B028-D63BC0D2B475} = {4AC2C1AF-226B-4A2F-864D-A597121073F4}
+		{A0D3DDB4-5704-4CB2-A311-A2A1FD305E07} = {943BB8BE-AD2B-4F4F-B028-D63BC0D2B475}
+		{C5C9B6CD-C456-4A77-A417-B8A5A746180E} = {943BB8BE-AD2B-4F4F-B028-D63BC0D2B475}
+		{9E2A8521-5B33-4053-8113-BB2555E22ACA} = {943BB8BE-AD2B-4F4F-B028-D63BC0D2B475}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B12D9689-B7A4-4555-AEB2-CB8FC30041D4}
+	EndGlobalSection
+EndGlobal

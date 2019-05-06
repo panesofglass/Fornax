@@ -100,7 +100,6 @@ Target.create "RunTest" (fun _ ->
     |> Expecto.run id
 )
 
-
 Target.create "BuildRelease" (fun _ ->
     releaseReferences
     |> Seq.iter (DotNet.build (fun p ->
